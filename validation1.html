@@ -1,0 +1,97 @@
+<html>
+<head>
+<script>
+function test()
+{
+		var name = document.getElementById("fname").value.trim();
+			 if(name=="")
+				{
+				document.getElementById("fname").style.borderColor="red";
+				document.getElementById("nerror").innerHTML="Invalid name";
+				
+				}
+					else
+					{
+						document.getElementById("fname").style.borderColor="green";
+						document.getElementById("nerror").innerHTML="";
+					}
+					
+				 var email=document.getElementById("email").value.trim();				 
+				if(email=="")
+				{
+					document.getElementById("email").style.borderColor="red";
+					document.getElementById("eerror").innerHTML="invalid Email";
+				}
+				
+				else
+				{
+				document.getElementById("email").style.borderColor="green";
+				document.getElementById("eerror").innerHTML="";
+				}
+				
+
+
+					var password=document.getElementById("password").value.trim();				 
+				if(password=="")||(
+				{
+					document.getElementById("password").style.borderColor="red";
+					document.getElementById("perror").innerHTML="invalid Email";
+				}
+				
+				else
+				{
+				document.getElementById("password").style.borderColor="green";
+				document.getElementById("perror").innerHTML="";
+				}
+						
+}		
+</script>
+</head>
+<body>
+<form>
+	<table align="center" cellpadding="5" cellspacing="5">
+		<tr>
+			<th>FullName</th>
+			<td> <input type="text" id="fname"></td>
+			<i id="nerror"></i>
+		</tr>
+		
+		<tr>
+			<th>Email</th>
+			<td> <input type="text" id="email"></td>
+			<i id="eerror"></i>
+		</tr>	
+			
+		<tr>
+			<th>password</th>
+			<td> <input type="password" id="password" maxlength="8"></td>
+			<i id="perror"></i>
+		</tr>	
+
+
+			<tr>
+			<th>conform password</th>
+			<td> <input type="password" id="cpassword" maxlength="8"></td>
+			<i id="cperror"></i>
+		</tr>
+
+			<tr >
+				
+				<td>
+				<input type="radio" id="male" name="gender">Male
+				<input type="radio" id="female" name="gender">Female
+				<i id="gerror"></i>
+				</td>
+				
+				
+				<tr>
+				<th colspan="2">
+				<button type="button" onclick="test()">Submit
+				<button type="reset" onclick="clearall()">cancel
+				</th>
+				</tr>
+				</th>
+				</table>
+				</form>
+				</html>
+				
